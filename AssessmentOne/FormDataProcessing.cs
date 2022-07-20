@@ -18,5 +18,10 @@ namespace AssessmentOne
         }
         LinkedList<double> sensorAData = new LinkedList<double>();
         LinkedList<double> sensorBData = new LinkedList<double>();
+
+        public void LoadData()
+        {
+            
+        }
     }
 }
