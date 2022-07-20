@@ -16,5 +16,7 @@ namespace AssessmentOne
         {
             InitializeComponent();
         }
+        LinkedList<double> sensorAData = new LinkedList<double>();
+        LinkedList<double> sensorBData = new LinkedList<double>();
     }
 }
