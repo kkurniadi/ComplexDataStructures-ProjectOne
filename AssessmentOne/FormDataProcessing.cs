@@ -167,6 +167,15 @@ namespace AssessmentOne
         // The search code must check to ensure the data is sorted, then start a stopwatch before calling the search method.
         // Once the search is complete the stopwatch will stop and the number of ticks will be displayed in a read only textbox.
         // Finally, the code will call the “DisplayListboxData” method and highlight the appropriate number (or the next closest number). 
+        public bool IsSorted(LinkedList<double> list)
+        {
+            for (int i = 1; i < NumberOfNodes(list); i++)
+            {
+                if (list.ElementAt(i - 1) > list.ElementAt(i))
+                    return false;
+            }
+            return true;
+        }
 
         // TODO: 4.12	Create four button click methods that will sort the LinkedList using the Selection and Insertion methods. The four methods are:
         // 1.	Method for Sensor A and Selection Sort
