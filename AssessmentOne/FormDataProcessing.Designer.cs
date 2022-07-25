@@ -292,6 +292,7 @@
             this.buttonInsertionSortA.TabIndex = 20;
             this.buttonInsertionSortA.Text = "Sort";
             this.buttonInsertionSortA.UseVisualStyleBackColor = true;
+            this.buttonInsertionSortA.Click += new System.EventHandler(this.buttonInsertionSortA_Click);
             // 
             // textBoxInsertionSortA
             // 
