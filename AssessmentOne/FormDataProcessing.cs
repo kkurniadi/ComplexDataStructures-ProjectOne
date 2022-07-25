@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -175,6 +176,20 @@ namespace AssessmentOne
                     return false;
             }
             return true;
+        }
+
+        private void buttonBinSearchIterA_Click(object sender, EventArgs e)
+        {
+            if (IsSorted(sensorAData))
+            {
+                Stopwatch stopwatch = new Stopwatch();
+                stopwatch.Start();
+                int target = BinarySearchIterative(sensorAData, int.Parse(textBoxSearchTargetA.Text), 0, NumberOfNodes(sensorAData));
+                stopwatch.Stop();
+                textBoxBinSearchIterA.Text = stopwatch.ElapsedTicks.ToString();
+                DisplayListboxData(sensorAData, listBoxSensorA);
+                listBoxSensorA.SelectedItems.Add(target);
+            }
         }
 
         // TODO: 4.12	Create four button click methods that will sort the LinkedList using the Selection and Insertion methods. The four methods are:

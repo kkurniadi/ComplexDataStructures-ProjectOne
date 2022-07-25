@@ -186,6 +186,7 @@
             this.buttonBinSearchIterA.TabIndex = 8;
             this.buttonBinSearchIterA.Text = "Search";
             this.buttonBinSearchIterA.UseVisualStyleBackColor = true;
+            this.buttonBinSearchIterA.Click += new System.EventHandler(this.buttonBinSearchIterA_Click);
             // 
             // textBoxBinSearchIterA
             // 
