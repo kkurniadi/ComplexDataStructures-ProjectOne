@@ -335,6 +335,7 @@
             this.buttonBinSearchIterB.TabIndex = 25;
             this.buttonBinSearchIterB.Text = "Search";
             this.buttonBinSearchIterB.UseVisualStyleBackColor = true;
+            this.buttonBinSearchIterB.Click += new System.EventHandler(this.buttonBinSearchIterB_Click);
             // 
             // textBoxBinSearchIterB
             // 
