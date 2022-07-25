@@ -192,6 +192,20 @@ namespace AssessmentOne
             }
         }
 
+        private void buttonBinSearchRecA_Click(object sender, EventArgs e)
+        {
+            if (IsSorted(sensorAData))
+            {
+                Stopwatch stopwatch = new Stopwatch();
+                stopwatch.Start();
+                int target = BinarySearchRecursive(sensorAData, int.Parse(textBoxSearchTargetA.Text), 0, NumberOfNodes(sensorAData));
+                stopwatch.Stop();
+                textBoxBinSearchRecA.Text = stopwatch.ElapsedTicks.ToString();
+                DisplayListboxData(sensorAData, listBoxSensorA);
+                listBoxSensorA.SelectedItems.Add(target);
+            }
+        }
+
         // TODO: 4.12	Create four button click methods that will sort the LinkedList using the Selection and Insertion methods. The four methods are:
         // 1.	Method for Sensor A and Selection Sort
         // 2.	Method for Sensor A and Insertion Sort

@@ -213,6 +213,7 @@
             this.buttonBinSearchRecA.TabIndex = 11;
             this.buttonBinSearchRecA.Text = "Search";
             this.buttonBinSearchRecA.UseVisualStyleBackColor = true;
+            this.buttonBinSearchRecA.Click += new System.EventHandler(this.buttonBinSearchRecA_Click);
             // 
             // textBoxBinSearchRecA
             // 
