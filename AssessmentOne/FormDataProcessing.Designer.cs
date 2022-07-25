@@ -256,6 +256,7 @@
             this.buttonSelectionSortA.TabIndex = 16;
             this.buttonSelectionSortA.Text = "Sort";
             this.buttonSelectionSortA.UseVisualStyleBackColor = true;
+            this.buttonSelectionSortA.Click += new System.EventHandler(this.buttonSelectionSortA_Click);
             // 
             // label8
             // 
