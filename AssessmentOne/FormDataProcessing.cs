@@ -80,7 +80,7 @@ namespace AssessmentOne
         // 4.7	Create a method called “SelectionSort” which has a single input parameter of type LinkedList,
         // while the calling code argument is the linkedlist name.
         // The method code must follow the pseudo code supplied below in the Appendix. The return type is Boolean.
-        public void SelectionSort(LinkedList<double> list)
+        public bool SelectionSort(LinkedList<double> list)
         {
             int min = 0;
             int max = NumberOfNodes(list);
@@ -98,6 +98,25 @@ namespace AssessmentOne
                 currentMin.Value = currentI.Value;
                 currentI.Value = temp;
             }
+            return true;
+        }
+        // 4.8	Create a method called “InsertionSort” which has a single parameter of type LinkedList,
+        // while the calling code argument is the linkedlist name.
+        // The method code must follow the pseudo code supplied below in the Appendix. The return type is Boolean.
+        public bool InsertionSort(LinkedList<double> list)
+        {
+            int max = NumberOfNodes(list);
+            for (int i = 0; i < max - 1; i++)
+            {
+                for (int j = i + 1; j > 0; j--)
+                {
+                    if (list.ElementAt(j - 1) > list.ElementAt(j))
+                    {
+                        LinkedListNode<double> current = list.Find(list.ElementAt(j));
+                    }
+                }
+            }
+            return true;
         }
     }
 }
