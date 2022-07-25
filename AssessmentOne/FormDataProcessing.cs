@@ -140,5 +140,24 @@ namespace AssessmentOne
             }
             return min;
         }
+        // 4.10	Create a method called “BinarySearchRecursive” which has the following four parameters:
+        // LinkedList, SearchValue, Minimum and Maximum.
+        // This method will return an integer of the linkedlist element from a successful search or the nearest neighbour value.
+        // The calling code argument is the linkedlist name, search value, minimum list size and the number of nodes in the list.
+        // The method code must follow the pseudo code supplied below in the Appendix.
+        public int BinarySearchRecursive(LinkedList<double> list, int value, int min, int max)
+        {
+            if (min <= max - 1)
+            {
+                int mid = (min + max) / 2;
+                if (value == list.ElementAt(mid))
+                    return mid;
+                else if (value < list.ElementAt(mid))
+                    return BinarySearchRecursive(list, value, min, mid - 1);
+                else
+                    return BinarySearchRecursive(list, value, mid + 1, max);
+            }
+            return min;
+        }
     }
 }
