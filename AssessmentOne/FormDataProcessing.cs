@@ -268,5 +268,19 @@ namespace AssessmentOne
                 DisplayListboxData(sensorAData, listBoxSensorA);
             }
         }
+
+        private void buttonSelectionSortB_Click(object sender, EventArgs e)
+        {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            bool sorted = SelectionSort(sensorBData);
+            if (sorted)
+            {
+                stopwatch.Stop();
+                textBoxSelectionSortB.Text = stopwatch.ElapsedMilliseconds.ToString();
+                ShowAllSensorData();
+                DisplayListboxData(sensorBData, listBoxSensorB);
+            }
+        }
     }
 }

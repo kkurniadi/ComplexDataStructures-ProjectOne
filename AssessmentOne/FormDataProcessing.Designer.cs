@@ -416,6 +416,7 @@
             this.buttonSelectionSortB.TabIndex = 34;
             this.buttonSelectionSortB.Text = "Sort";
             this.buttonSelectionSortB.UseVisualStyleBackColor = true;
+            this.buttonSelectionSortB.Click += new System.EventHandler(this.buttonSelectionSortB_Click);
             // 
             // textBoxSelectionSortB
             // 
