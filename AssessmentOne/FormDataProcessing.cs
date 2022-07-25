@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Galileo;
 
 namespace AssessmentOne
 {
@@ -21,7 +22,15 @@ namespace AssessmentOne
 
         public void LoadData()
         {
-            
+            ReadData rd = new ReadData();
+            int maxSize = 400;
+            sensorAData.Clear();
+            sensorBData.Clear();
+            for (int x = 0; x < maxSize; x++)
+            {
+                sensorAData.AddLast(rd.SensorA((double)numericUpDownMu.Value,(double)numericUpDownSigma.Value));
+                sensorBData.AddLast(rd.SensorB((double)numericUpDownMu.Value,(double)numericUpDownSigma.Value));
+            }
         }
     }
 }
