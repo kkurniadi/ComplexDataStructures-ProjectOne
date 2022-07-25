@@ -113,10 +113,32 @@ namespace AssessmentOne
                     if (list.ElementAt(j - 1) > list.ElementAt(j))
                     {
                         LinkedListNode<double> current = list.Find(list.ElementAt(j));
+                        var temp = current.Previous.Value;
+                        current.Previous.Value = current.Value;
+                        current.Value = temp;
                     }
                 }
             }
             return true;
+        }
+        // 4.9	Create a method called “BinarySearchIterative” which has the following four parameters:
+        // LinkedList, SearchValue, Minimum and Maximum.
+        // This method will return an integer of the linkedlist element from a successful search or the nearest neighbour value.
+        // The calling code argument is the linkedlist name, search value, minimum list size and the number of nodes in the list.
+        // The method code must follow the pseudo code supplied below in the Appendix.
+        public int BinarySearchIterative(LinkedList<double> list, int value, int min, int max)
+        {
+            while (min <= max - 1)
+            {
+                int mid = (min + max) / 2;
+                if (value == list.ElementAt(mid))
+                    return ++mid;
+                else if (value < list.ElementAt(mid))
+                    max = mid - 1;
+                else
+                    min = mid + 1;
+            }
+            return min;
         }
     }
 }
