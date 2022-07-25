@@ -68,6 +68,8 @@
             this.buttonInsertionSortB = new System.Windows.Forms.Button();
             this.textBoxInsertionSortB = new System.Windows.Forms.TextBox();
             this.listBoxSensorB = new System.Windows.Forms.ListBox();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSigma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMu)).BeginInit();
             this.SuspendLayout();
@@ -145,6 +147,9 @@
             // 
             // listViewSensorData
             // 
+            this.listViewSensorData.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
             this.listViewSensorData.HideSelection = false;
             this.listViewSensorData.Location = new System.Drawing.Point(12, 85);
             this.listViewSensorData.Name = "listViewSensorData";
@@ -447,6 +452,14 @@
             this.listBoxSensorB.Size = new System.Drawing.Size(120, 459);
             this.listBoxSensorB.TabIndex = 39;
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Sensor A";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Sensor B";
+            // 
             // FormDataProcessing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -543,6 +556,8 @@
         private System.Windows.Forms.Button buttonInsertionSortB;
         private System.Windows.Forms.TextBox textBoxInsertionSortB;
         private System.Windows.Forms.ListBox listBoxSensorB;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
     }
 }
 

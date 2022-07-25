@@ -32,5 +32,15 @@ namespace AssessmentOne
                 sensorBData.AddLast(rd.SensorB((double)numericUpDownMu.Value,(double)numericUpDownSigma.Value));
             }
         }
+        public void ShowAllSensorData()
+        {
+            listViewSensorData.Items.Clear();
+            for (int i = 0; i < sensorAData.Count; i++)
+            {
+                string[] row = { sensorAData.ElementAt(i).ToString(), sensorBData.ElementAt(i).ToString() };
+                ListViewItem lvi = new ListViewItem(row);
+                listViewSensorData.Items.Add(lvi);
+            }
+        }
     }
 }
