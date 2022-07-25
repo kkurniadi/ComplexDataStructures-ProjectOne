@@ -144,6 +144,7 @@
             this.buttonLoadSensorData.TabIndex = 4;
             this.buttonLoadSensorData.Text = "Load Sensor Data";
             this.buttonLoadSensorData.UseVisualStyleBackColor = true;
+            this.buttonLoadSensorData.Click += new System.EventHandler(this.buttonLoadSensorData_Click);
             // 
             // listViewSensorData
             // 

@@ -42,5 +42,11 @@ namespace AssessmentOne
                 listViewSensorData.Items.Add(lvi);
             }
         }
+
+        private void buttonLoadSensorData_Click(object sender, EventArgs e)
+        {
+            LoadData();
+            ShowAllSensorData();
+        }
     }
 }
