@@ -233,7 +233,7 @@ namespace AssessmentOne
                 listBoxSensorB.SelectedIndex = target;
             }
         }
-        // TODO: 4.12	Create four button click methods that will sort the LinkedList using the Selection and Insertion methods. The four methods are:
+        // 4.12	Create four button click methods that will sort the LinkedList using the Selection and Insertion methods. The four methods are:
         // 1.	Method for Sensor A and Selection Sort
         // 2.	Method for Sensor A and Insertion Sort
         // 3.	Method for Sensor B and Selection Sort
