@@ -188,7 +188,7 @@ namespace AssessmentOne
                 stopwatch.Stop();
                 textBoxBinSearchIterA.Text = stopwatch.ElapsedTicks.ToString();
                 DisplayListboxData(sensorAData, listBoxSensorA);
-                listBoxSensorA.SelectedItems.Add(target);
+                listBoxSensorA.SelectedIndex = target;
             }
         }
 
@@ -202,7 +202,7 @@ namespace AssessmentOne
                 stopwatch.Stop();
                 textBoxBinSearchRecA.Text = stopwatch.ElapsedTicks.ToString();
                 DisplayListboxData(sensorAData, listBoxSensorA);
-                listBoxSensorA.SelectedItems.Add(target);
+                listBoxSensorA.SelectedIndex = target;
             }
         }
 
@@ -216,7 +216,7 @@ namespace AssessmentOne
                 stopwatch.Stop();
                 textBoxBinSearchIterB.Text = stopwatch.ElapsedTicks.ToString();
                 DisplayListboxData(sensorBData, listBoxSensorB);
-                listBoxSensorB.SelectedItems.Add(target);
+                listBoxSensorB.SelectedIndex = target;
             }
         }
 
@@ -230,7 +230,7 @@ namespace AssessmentOne
                 stopwatch.Stop();
                 textBoxBinSearchRecB.Text = stopwatch.ElapsedTicks.ToString();
                 DisplayListboxData(sensorBData, listBoxSensorB);
-                listBoxSensorB.SelectedItems.Add(target);
+                listBoxSensorB.SelectedIndex = target;
             }
         }
         // TODO: 4.12	Create four button click methods that will sort the LinkedList using the Selection and Insertion methods. The four methods are:
