@@ -191,7 +191,6 @@ namespace AssessmentOne
                 listBoxSensorA.SelectedIndex = target;
             }
         }
-
         private void buttonBinSearchRecA_Click(object sender, EventArgs e)
         {
             if (IsSorted(sensorAData))
@@ -205,7 +204,6 @@ namespace AssessmentOne
                 listBoxSensorA.SelectedIndex = target;
             }
         }
-
         private void buttonBinSearchIterB_Click(object sender, EventArgs e)
         {
             if (IsSorted(sensorBData))
@@ -219,7 +217,6 @@ namespace AssessmentOne
                 listBoxSensorB.SelectedIndex = target;
             }
         }
-
         private void buttonBinSearchRecB_Click(object sender, EventArgs e)
         {
             if (IsSorted(sensorBData))
@@ -254,7 +251,6 @@ namespace AssessmentOne
                 DisplayListboxData(sensorAData, listBoxSensorA);
             }
         }
-
         private void buttonInsertionSortA_Click(object sender, EventArgs e)
         {
             Stopwatch stopwatch = new Stopwatch();
@@ -268,7 +264,6 @@ namespace AssessmentOne
                 DisplayListboxData(sensorAData, listBoxSensorA);
             }
         }
-
         private void buttonSelectionSortB_Click(object sender, EventArgs e)
         {
             Stopwatch stopwatch = new Stopwatch();
@@ -282,7 +277,6 @@ namespace AssessmentOne
                 DisplayListboxData(sensorBData, listBoxSensorB);
             }
         }
-
         private void buttonInsertionSortB_Click(object sender, EventArgs e)
         {
             Stopwatch stopwatch = new Stopwatch();
@@ -304,7 +298,6 @@ namespace AssessmentOne
                 e.Handled = true;
             }
         }
-
         private void textBoxSearchTargetB_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back))
