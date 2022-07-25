@@ -159,5 +159,23 @@ namespace AssessmentOne
             }
             return min;
         }
+        // TODO: 4.11	Create four button click methods that will search the LinkedList for a value entered into a textbox on the form. The four methods are:
+        // 1.	Method for Sensor A and Binary Search Iterative
+        // 2.	Method for Sensor A and Binary Search Recursive
+        // 3.	Method for Sensor B and Binary Search Iterative
+        // 4.	Method for Sensor B and Binary Search Recursive
+        // The search code must check to ensure the data is sorted, then start a stopwatch before calling the search method.
+        // Once the search is complete the stopwatch will stop and the number of ticks will be displayed in a read only textbox.
+        // Finally, the code will call the “DisplayListboxData” method and highlight the appropriate number (or the next closest number). 
+
+        // TODO: 4.12	Create four button click methods that will sort the LinkedList using the Selection and Insertion methods. The four methods are:
+        // 1.	Method for Sensor A and Selection Sort
+        // 2.	Method for Sensor A and Insertion Sort
+        // 3.	Method for Sensor B and Selection Sort
+        // 4.	Method for Sensor B and Insertion Sort
+        // The button method must start a stopwatch before calling the sort method.
+        // Once the sort is complete the stopwatch will stop and the number of milliseconds will be displayed in a read only textbox.
+        // Finally, the code will call the “ShowAllSensorData” method and “DisplayListboxData” for the appropriate sensor.
+
     }
 }
