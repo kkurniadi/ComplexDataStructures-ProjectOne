@@ -52,5 +52,13 @@ namespace AssessmentOne
         {
             return ll.Count;
         }
+        public void DisplayListboxData(LinkedList<double> ll, ListBox lb)
+        {
+            lb.Items.Clear();
+            for (int i = 0; i < NumberOfNodes(ll); i++)
+            {
+                lb.Items.Add(ll.ElementAt(i).ToString());
+            }
+        }
     }
 }
