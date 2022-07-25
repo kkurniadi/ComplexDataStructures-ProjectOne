@@ -247,6 +247,7 @@
             this.textBoxSearchTargetA.Name = "textBoxSearchTargetA";
             this.textBoxSearchTargetA.Size = new System.Drawing.Size(52, 20);
             this.textBoxSearchTargetA.TabIndex = 15;
+            this.textBoxSearchTargetA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSearchTargetA_KeyPress);
             // 
             // buttonSelectionSortA
             // 
@@ -398,6 +399,7 @@
             this.textBoxSearchTargetB.Name = "textBoxSearchTargetB";
             this.textBoxSearchTargetB.Size = new System.Drawing.Size(49, 20);
             this.textBoxSearchTargetB.TabIndex = 32;
+            this.textBoxSearchTargetB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSearchTargetB_KeyPress);
             // 
             // label15
             // 

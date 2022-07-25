@@ -296,5 +296,21 @@ namespace AssessmentOne
                 DisplayListboxData(sensorBData, listBoxSensorB);
             }
         }
+        // 4.14	Add two textboxes for the search value; one for each sensor, ensure only numeric values can be entered.
+        private void textBoxSearchTargetA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxSearchTargetB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
