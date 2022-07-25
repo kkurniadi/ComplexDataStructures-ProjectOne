@@ -48,5 +48,9 @@ namespace AssessmentOne
             LoadData();
             ShowAllSensorData();
         }
+        public int NumberOfNodes(LinkedList<double> ll)
+        {
+            return ll.Count;
+        }
     }
 }
