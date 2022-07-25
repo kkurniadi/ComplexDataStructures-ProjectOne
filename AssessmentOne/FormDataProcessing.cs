@@ -282,5 +282,19 @@ namespace AssessmentOne
                 DisplayListboxData(sensorBData, listBoxSensorB);
             }
         }
+
+        private void buttonInsertionSortB_Click(object sender, EventArgs e)
+        {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            bool sorted = InsertionSort(sensorBData);
+            if (sorted)
+            {
+                stopwatch.Stop();
+                textBoxInsertionSortB.Text = stopwatch.ElapsedMilliseconds.ToString();
+                ShowAllSensorData();
+                DisplayListboxData(sensorBData, listBoxSensorB);
+            }
+        }
     }
 }

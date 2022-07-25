@@ -443,6 +443,7 @@
             this.buttonInsertionSortB.TabIndex = 37;
             this.buttonInsertionSortB.Text = "Sort";
             this.buttonInsertionSortB.UseVisualStyleBackColor = true;
+            this.buttonInsertionSortB.Click += new System.EventHandler(this.buttonInsertionSortB_Click);
             // 
             // textBoxInsertionSortB
             // 
