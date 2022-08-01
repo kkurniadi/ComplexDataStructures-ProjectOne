@@ -305,7 +305,8 @@ namespace AssessmentOne
         private void HighlightData(ListBox lb, int foundIndex)
         {
             int y = foundIndex;
-            if (y > 1 && y < 397)
+            int z = lb.Items.Count;
+            if (y > 1 && y < z - 3)
             {
                 for (int x = y - 2; x < y + 3; x++)
                 {
@@ -319,9 +320,9 @@ namespace AssessmentOne
                     lb.SetSelected(x, true);
                 }
             }
-            else if (y > 396)
+            else if (y > z - 4)
             {
-                for (int x = 395; x < 400; x++)
+                for (int x = z - 5; x < z; x++)
                 {
                     lb.SetSelected(x, true);
                 }
