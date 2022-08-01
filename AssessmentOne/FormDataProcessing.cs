@@ -188,7 +188,7 @@ namespace AssessmentOne
                 stopwatch.Stop();
                 textBoxBinSearchIterA.Text = stopwatch.ElapsedTicks.ToString();
                 DisplayListboxData(sensorAData, listBoxSensorA);
-                listBoxSensorA.SelectedIndex = target;
+                HighlightData(listBoxSensorA, target);
             }
         }
         private void buttonBinSearchRecA_Click(object sender, EventArgs e)
@@ -201,7 +201,7 @@ namespace AssessmentOne
                 stopwatch.Stop();
                 textBoxBinSearchRecA.Text = stopwatch.ElapsedTicks.ToString();
                 DisplayListboxData(sensorAData, listBoxSensorA);
-                listBoxSensorA.SelectedIndex = target;
+                HighlightData(listBoxSensorA, target);
             }
         }
         private void buttonBinSearchIterB_Click(object sender, EventArgs e)
@@ -214,7 +214,7 @@ namespace AssessmentOne
                 stopwatch.Stop();
                 textBoxBinSearchIterB.Text = stopwatch.ElapsedTicks.ToString();
                 DisplayListboxData(sensorBData, listBoxSensorB);
-                listBoxSensorB.SelectedIndex = target;
+                HighlightData(listBoxSensorB, target);
             }
         }
         private void buttonBinSearchRecB_Click(object sender, EventArgs e)
@@ -227,7 +227,7 @@ namespace AssessmentOne
                 stopwatch.Stop();
                 textBoxBinSearchRecB.Text = stopwatch.ElapsedTicks.ToString();
                 DisplayListboxData(sensorBData, listBoxSensorB);
-                listBoxSensorB.SelectedIndex = target;
+                HighlightData(listBoxSensorB, target);
             }
         }
         // 4.12	Create four button click methods that will sort the LinkedList using the Selection and Insertion methods. The four methods are:
@@ -302,13 +302,13 @@ namespace AssessmentOne
                 kp.Handled = true;
             }
         }
-        private void HighlightData(int foundIndex)
+        private void HighlightData(ListBox lb, int foundIndex)
         {
             int y = foundIndex;
             for (int x = y - 2; x < y + 3; x++)
             {
                 // fix
-                listBoxSensorA.SetSelected(x, true);
+                lb.SetSelected(x, true);
             }
         }
     }
