@@ -316,7 +316,7 @@
             this.listBoxSensorA.FormattingEnabled = true;
             this.listBoxSensorA.Location = new System.Drawing.Point(340, 47);
             this.listBoxSensorA.Name = "listBoxSensorA";
-            this.listBoxSensorA.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.listBoxSensorA.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.listBoxSensorA.Size = new System.Drawing.Size(120, 459);
             this.listBoxSensorA.TabIndex = 22;
             // 
@@ -469,7 +469,7 @@
             this.listBoxSensorB.FormattingEnabled = true;
             this.listBoxSensorB.Location = new System.Drawing.Point(621, 47);
             this.listBoxSensorB.Name = "listBoxSensorB";
-            this.listBoxSensorB.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.listBoxSensorB.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.listBoxSensorB.Size = new System.Drawing.Size(120, 459);
             this.listBoxSensorB.TabIndex = 39;
             // 
