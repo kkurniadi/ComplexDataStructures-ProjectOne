@@ -192,6 +192,8 @@ namespace AssessmentOne
                     HighlightData(listBoxSensorA, target);
                 }
             }
+            else
+                MessageBox.Show("Please enter a value to search for", "Binary Search", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
         private void buttonBinSearchRecA_Click(object sender, EventArgs e)
         {
@@ -207,6 +209,8 @@ namespace AssessmentOne
                     HighlightData(listBoxSensorA, target);
                 }
             }
+            else
+                MessageBox.Show("Please enter a value to search for", "Binary Search", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
         private void buttonBinSearchIterB_Click(object sender, EventArgs e)
         {
@@ -222,6 +226,8 @@ namespace AssessmentOne
                     HighlightData(listBoxSensorB, target);
                 }
             }
+            else
+                MessageBox.Show("Please enter a value to search for", "Binary Search", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
         private void buttonBinSearchRecB_Click(object sender, EventArgs e)
         {
@@ -237,6 +243,8 @@ namespace AssessmentOne
                     HighlightData(listBoxSensorB, target);
                 }
             }
+            else
+                MessageBox.Show("Please enter a value to search for", "Binary Search", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
         // 4.12	Create four button click methods that will sort the LinkedList using the Selection and Insertion methods. The four methods are:
         // 1.	Method for Sensor A and Selection Sort
