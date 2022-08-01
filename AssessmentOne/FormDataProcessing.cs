@@ -180,7 +180,7 @@ namespace AssessmentOne
 
         private void buttonBinSearchIterA_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(textBoxBinSearchIterA.Text))
+            if (!string.IsNullOrWhiteSpace(textBoxSearchTargetA.Text))
             {
                 if (IsSorted(sensorAData))
                 {
@@ -195,7 +195,7 @@ namespace AssessmentOne
         }
         private void buttonBinSearchRecA_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(textBoxBinSearchRecA.Text))
+            if (!string.IsNullOrWhiteSpace(textBoxSearchTargetA.Text))
             {
                 if (IsSorted(sensorAData))
                 {
@@ -210,7 +210,7 @@ namespace AssessmentOne
         }
         private void buttonBinSearchIterB_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(textBoxBinSearchIterB.Text))
+            if (!string.IsNullOrWhiteSpace(textBoxSearchTargetB.Text))
             {
                 if (IsSorted(sensorBData))
                 {
@@ -225,7 +225,7 @@ namespace AssessmentOne
         }
         private void buttonBinSearchRecB_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(textBoxBinSearchRecB.Text))
+            if (!string.IsNullOrWhiteSpace(textBoxSearchTargetB.Text))
             {
                 if (IsSorted(sensorBData))
                 {
