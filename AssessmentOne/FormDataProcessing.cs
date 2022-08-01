@@ -182,8 +182,7 @@ namespace AssessmentOne
         {
             if (IsSorted(sensorAData))
             {
-                Stopwatch stopwatch = new Stopwatch();
-                stopwatch.Start();
+                Stopwatch stopwatch = Stopwatch.StartNew();
                 int target = BinarySearchIterative(sensorAData, int.Parse(textBoxSearchTargetA.Text), 0, NumberOfNodes(sensorAData));
                 stopwatch.Stop();
                 textBoxBinSearchIterA.Text = stopwatch.ElapsedTicks.ToString() + " ticks";
@@ -195,8 +194,7 @@ namespace AssessmentOne
         {
             if (IsSorted(sensorAData))
             {
-                Stopwatch stopwatch = new Stopwatch();
-                stopwatch.Start();
+                Stopwatch stopwatch = Stopwatch.StartNew();
                 int target = BinarySearchRecursive(sensorAData, int.Parse(textBoxSearchTargetA.Text), 0, NumberOfNodes(sensorAData));
                 stopwatch.Stop();
                 textBoxBinSearchRecA.Text = stopwatch.ElapsedTicks.ToString() + " ticks";
@@ -208,8 +206,7 @@ namespace AssessmentOne
         {
             if (IsSorted(sensorBData))
             {
-                Stopwatch stopwatch = new Stopwatch();
-                stopwatch.Start();
+                Stopwatch stopwatch = Stopwatch.StartNew();
                 int target = BinarySearchIterative(sensorBData, int.Parse(textBoxSearchTargetB.Text), 0, NumberOfNodes(sensorBData));
                 stopwatch.Stop();
                 textBoxBinSearchIterB.Text = stopwatch.ElapsedTicks.ToString() + " ticks";
@@ -221,8 +218,7 @@ namespace AssessmentOne
         {
             if (IsSorted(sensorBData))
             {
-                Stopwatch stopwatch = new Stopwatch();
-                stopwatch.Start();
+                Stopwatch stopwatch = Stopwatch.StartNew();
                 int target = BinarySearchRecursive(sensorBData, int.Parse(textBoxSearchTargetB.Text), 0, NumberOfNodes(sensorBData));
                 stopwatch.Stop();
                 textBoxBinSearchRecB.Text = stopwatch.ElapsedTicks.ToString() + " ticks";
