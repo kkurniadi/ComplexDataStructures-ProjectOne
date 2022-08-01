@@ -182,15 +182,18 @@ namespace AssessmentOne
         {
             if (!string.IsNullOrWhiteSpace(textBoxSearchTargetA.Text))
             {
-                if (IsSorted(sensorAData))
+                if (!IsSorted(sensorAData))
                 {
-                    Stopwatch stopwatch = Stopwatch.StartNew();
-                    int target = BinarySearchIterative(sensorAData, int.Parse(textBoxSearchTargetA.Text), 0, NumberOfNodes(sensorAData));
-                    stopwatch.Stop();
-                    textBoxBinSearchIterA.Text = stopwatch.ElapsedTicks.ToString() + " ticks";
-                    DisplayListboxData(sensorAData, listBoxSensorA);
-                    HighlightData(listBoxSensorA, target);
+                    // TODO: Get data to sort and display
+                    sensorAData.OrderBy(data => data);
+                    ShowAllSensorData();
                 }
+                Stopwatch stopwatch = Stopwatch.StartNew();
+                int target = BinarySearchIterative(sensorAData, int.Parse(textBoxSearchTargetA.Text), 0, NumberOfNodes(sensorAData));
+                stopwatch.Stop();
+                textBoxBinSearchIterA.Text = stopwatch.ElapsedTicks.ToString() + " ticks";
+                DisplayListboxData(sensorAData, listBoxSensorA);
+                HighlightData(listBoxSensorA, target);
             }
             else
                 MessageBox.Show("Please enter a value to search for", "Binary Search", MessageBoxButtons.OK, MessageBoxIcon.Warning);
