@@ -186,7 +186,7 @@ namespace AssessmentOne
                 stopwatch.Start();
                 int target = BinarySearchIterative(sensorAData, int.Parse(textBoxSearchTargetA.Text), 0, NumberOfNodes(sensorAData));
                 stopwatch.Stop();
-                textBoxBinSearchIterA.Text = stopwatch.ElapsedTicks.ToString();
+                textBoxBinSearchIterA.Text = stopwatch.ElapsedTicks.ToString() + " ticks";
                 DisplayListboxData(sensorAData, listBoxSensorA);
                 HighlightData(listBoxSensorA, target);
             }
@@ -199,7 +199,7 @@ namespace AssessmentOne
                 stopwatch.Start();
                 int target = BinarySearchRecursive(sensorAData, int.Parse(textBoxSearchTargetA.Text), 0, NumberOfNodes(sensorAData));
                 stopwatch.Stop();
-                textBoxBinSearchRecA.Text = stopwatch.ElapsedTicks.ToString();
+                textBoxBinSearchRecA.Text = stopwatch.ElapsedTicks.ToString() + " ticks";
                 DisplayListboxData(sensorAData, listBoxSensorA);
                 HighlightData(listBoxSensorA, target);
             }
@@ -212,7 +212,7 @@ namespace AssessmentOne
                 stopwatch.Start();
                 int target = BinarySearchIterative(sensorBData, int.Parse(textBoxSearchTargetB.Text), 0, NumberOfNodes(sensorBData));
                 stopwatch.Stop();
-                textBoxBinSearchIterB.Text = stopwatch.ElapsedTicks.ToString();
+                textBoxBinSearchIterB.Text = stopwatch.ElapsedTicks.ToString() + " ticks";
                 DisplayListboxData(sensorBData, listBoxSensorB);
                 HighlightData(listBoxSensorB, target);
             }
@@ -225,7 +225,7 @@ namespace AssessmentOne
                 stopwatch.Start();
                 int target = BinarySearchRecursive(sensorBData, int.Parse(textBoxSearchTargetB.Text), 0, NumberOfNodes(sensorBData));
                 stopwatch.Stop();
-                textBoxBinSearchRecB.Text = stopwatch.ElapsedTicks.ToString();
+                textBoxBinSearchRecB.Text = stopwatch.ElapsedTicks.ToString() + " ticks";
                 DisplayListboxData(sensorBData, listBoxSensorB);
                 HighlightData(listBoxSensorB, target);
             }
@@ -245,7 +245,7 @@ namespace AssessmentOne
             if (sorted)
             {
                 stopwatch.Stop();
-                textBoxSelectionSortA.Text = stopwatch.ElapsedMilliseconds.ToString();
+                textBoxSelectionSortA.Text = stopwatch.ElapsedMilliseconds.ToString() + " ms";
                 ShowAllSensorData();
                 DisplayListboxData(sensorAData, listBoxSensorA);
             }
@@ -257,7 +257,7 @@ namespace AssessmentOne
             if (sorted)
             {
                 stopwatch.Stop();
-                textBoxInsertionSortA.Text = stopwatch.ElapsedMilliseconds.ToString();
+                textBoxInsertionSortA.Text = stopwatch.ElapsedMilliseconds.ToString() + " ms";
                 ShowAllSensorData();
                 DisplayListboxData(sensorAData, listBoxSensorA);
             }
@@ -269,7 +269,7 @@ namespace AssessmentOne
             if (sorted)
             {
                 stopwatch.Stop();
-                textBoxSelectionSortB.Text = stopwatch.ElapsedMilliseconds.ToString();
+                textBoxSelectionSortB.Text = stopwatch.ElapsedMilliseconds.ToString() + " ms";
                 ShowAllSensorData();
                 DisplayListboxData(sensorBData, listBoxSensorB);
             }
@@ -281,7 +281,7 @@ namespace AssessmentOne
             if (sorted)
             {
                 stopwatch.Stop();
-                textBoxInsertionSortB.Text = stopwatch.ElapsedMilliseconds.ToString();
+                textBoxInsertionSortB.Text = stopwatch.ElapsedMilliseconds.ToString() + " ms";
                 ShowAllSensorData();
                 DisplayListboxData(sensorBData, listBoxSensorB);
             }
