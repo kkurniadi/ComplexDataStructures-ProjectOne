@@ -240,8 +240,7 @@ namespace AssessmentOne
         // Finally, the code will call the “ShowAllSensorData” method and “DisplayListboxData” for the appropriate sensor.
         private void buttonSelectionSortA_Click(object sender, EventArgs e)
         {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
+            Stopwatch stopwatch = Stopwatch.StartNew();
             bool sorted = SelectionSort(sensorAData);
             if (sorted)
             {
@@ -253,8 +252,7 @@ namespace AssessmentOne
         }
         private void buttonInsertionSortA_Click(object sender, EventArgs e)
         {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
+            Stopwatch stopwatch = Stopwatch.StartNew();
             bool sorted = InsertionSort(sensorAData);
             if (sorted)
             {
@@ -266,8 +264,7 @@ namespace AssessmentOne
         }
         private void buttonSelectionSortB_Click(object sender, EventArgs e)
         {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
+            Stopwatch stopwatch = Stopwatch.StartNew();
             bool sorted = SelectionSort(sensorBData);
             if (sorted)
             {
@@ -279,8 +276,7 @@ namespace AssessmentOne
         }
         private void buttonInsertionSortB_Click(object sender, EventArgs e)
         {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
+            Stopwatch stopwatch = Stopwatch.StartNew();
             bool sorted = InsertionSort(sensorBData);
             if (sorted)
             {
@@ -304,6 +300,15 @@ namespace AssessmentOne
             if (!(char.IsDigit(kp.KeyChar) || kp.KeyChar == (char)Keys.Back))
             {
                 kp.Handled = true;
+            }
+        }
+        private void HighlightData(int foundIndex)
+        {
+            int y = foundIndex;
+            for (int x = y - 2; x < y + 3; x++)
+            {
+                // fix
+                listBoxSensorA.SetSelected(x, true);
             }
         }
     }
