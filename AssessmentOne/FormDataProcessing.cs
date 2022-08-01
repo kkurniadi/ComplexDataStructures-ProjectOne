@@ -180,50 +180,62 @@ namespace AssessmentOne
 
         private void buttonBinSearchIterA_Click(object sender, EventArgs e)
         {
-            if (IsSorted(sensorAData))
+            if (!string.IsNullOrWhiteSpace(textBoxBinSearchIterA.Text))
             {
-                Stopwatch stopwatch = Stopwatch.StartNew();
-                int target = BinarySearchIterative(sensorAData, int.Parse(textBoxSearchTargetA.Text), 0, NumberOfNodes(sensorAData));
-                stopwatch.Stop();
-                textBoxBinSearchIterA.Text = stopwatch.ElapsedTicks.ToString() + " ticks";
-                DisplayListboxData(sensorAData, listBoxSensorA);
-                HighlightData(listBoxSensorA, target);
+                if (IsSorted(sensorAData))
+                {
+                    Stopwatch stopwatch = Stopwatch.StartNew();
+                    int target = BinarySearchIterative(sensorAData, int.Parse(textBoxSearchTargetA.Text), 0, NumberOfNodes(sensorAData));
+                    stopwatch.Stop();
+                    textBoxBinSearchIterA.Text = stopwatch.ElapsedTicks.ToString() + " ticks";
+                    DisplayListboxData(sensorAData, listBoxSensorA);
+                    HighlightData(listBoxSensorA, target);
+                }
             }
         }
         private void buttonBinSearchRecA_Click(object sender, EventArgs e)
         {
-            if (IsSorted(sensorAData))
+            if (!string.IsNullOrWhiteSpace(textBoxBinSearchRecA.Text))
             {
-                Stopwatch stopwatch = Stopwatch.StartNew();
-                int target = BinarySearchRecursive(sensorAData, int.Parse(textBoxSearchTargetA.Text), 0, NumberOfNodes(sensorAData));
-                stopwatch.Stop();
-                textBoxBinSearchRecA.Text = stopwatch.ElapsedTicks.ToString() + " ticks";
-                DisplayListboxData(sensorAData, listBoxSensorA);
-                HighlightData(listBoxSensorA, target);
+                if (IsSorted(sensorAData))
+                {
+                    Stopwatch stopwatch = Stopwatch.StartNew();
+                    int target = BinarySearchRecursive(sensorAData, int.Parse(textBoxSearchTargetA.Text), 0, NumberOfNodes(sensorAData));
+                    stopwatch.Stop();
+                    textBoxBinSearchRecA.Text = stopwatch.ElapsedTicks.ToString() + " ticks";
+                    DisplayListboxData(sensorAData, listBoxSensorA);
+                    HighlightData(listBoxSensorA, target);
+                }
             }
         }
         private void buttonBinSearchIterB_Click(object sender, EventArgs e)
         {
-            if (IsSorted(sensorBData))
+            if (!string.IsNullOrWhiteSpace(textBoxBinSearchIterB.Text))
             {
-                Stopwatch stopwatch = Stopwatch.StartNew();
-                int target = BinarySearchIterative(sensorBData, int.Parse(textBoxSearchTargetB.Text), 0, NumberOfNodes(sensorBData));
-                stopwatch.Stop();
-                textBoxBinSearchIterB.Text = stopwatch.ElapsedTicks.ToString() + " ticks";
-                DisplayListboxData(sensorBData, listBoxSensorB);
-                HighlightData(listBoxSensorB, target);
+                if (IsSorted(sensorBData))
+                {
+                    Stopwatch stopwatch = Stopwatch.StartNew();
+                    int target = BinarySearchIterative(sensorBData, int.Parse(textBoxSearchTargetB.Text), 0, NumberOfNodes(sensorBData));
+                    stopwatch.Stop();
+                    textBoxBinSearchIterB.Text = stopwatch.ElapsedTicks.ToString() + " ticks";
+                    DisplayListboxData(sensorBData, listBoxSensorB);
+                    HighlightData(listBoxSensorB, target);
+                }
             }
         }
         private void buttonBinSearchRecB_Click(object sender, EventArgs e)
         {
-            if (IsSorted(sensorBData))
+            if (!string.IsNullOrWhiteSpace(textBoxBinSearchRecB.Text))
             {
-                Stopwatch stopwatch = Stopwatch.StartNew();
-                int target = BinarySearchRecursive(sensorBData, int.Parse(textBoxSearchTargetB.Text), 0, NumberOfNodes(sensorBData));
-                stopwatch.Stop();
-                textBoxBinSearchRecB.Text = stopwatch.ElapsedTicks.ToString() + " ticks";
-                DisplayListboxData(sensorBData, listBoxSensorB);
-                HighlightData(listBoxSensorB, target);
+                if (IsSorted(sensorBData))
+                {
+                    Stopwatch stopwatch = Stopwatch.StartNew();
+                    int target = BinarySearchRecursive(sensorBData, int.Parse(textBoxSearchTargetB.Text), 0, NumberOfNodes(sensorBData));
+                    stopwatch.Stop();
+                    textBoxBinSearchRecB.Text = stopwatch.ElapsedTicks.ToString() + " ticks";
+                    DisplayListboxData(sensorBData, listBoxSensorB);
+                    HighlightData(listBoxSensorB, target);
+                }
             }
         }
         // 4.12	Create four button click methods that will sort the LinkedList using the Selection and Insertion methods. The four methods are:
