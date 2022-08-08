@@ -261,8 +261,7 @@ namespace AssessmentOne
         private void buttonSelectionSortA_Click(object sender, EventArgs e)
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
-            bool sorted = SelectionSort(sensorAData);
-            if (sorted)
+            if (SelectionSort(sensorAData))
             {
                 stopwatch.Stop();
                 textBoxSelectionSortA.Text = stopwatch.ElapsedMilliseconds.ToString() + " ms";
@@ -273,8 +272,7 @@ namespace AssessmentOne
         private void buttonInsertionSortA_Click(object sender, EventArgs e)
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
-            bool sorted = InsertionSort(sensorAData);
-            if (sorted)
+            if (InsertionSort(sensorAData))
             {
                 stopwatch.Stop();
                 textBoxInsertionSortA.Text = stopwatch.ElapsedMilliseconds.ToString() + " ms";
@@ -285,8 +283,7 @@ namespace AssessmentOne
         private void buttonSelectionSortB_Click(object sender, EventArgs e)
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
-            bool sorted = SelectionSort(sensorBData);
-            if (sorted)
+            if (SelectionSort(sensorBData))
             {
                 stopwatch.Stop();
                 textBoxSelectionSortB.Text = stopwatch.ElapsedMilliseconds.ToString() + " ms";
@@ -297,8 +294,7 @@ namespace AssessmentOne
         private void buttonInsertionSortB_Click(object sender, EventArgs e)
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
-            bool sorted = InsertionSort(sensorBData);
-            if (sorted)
+            if (InsertionSort(sensorBData))
             {
                 stopwatch.Stop();
                 textBoxInsertionSortB.Text = stopwatch.ElapsedMilliseconds.ToString() + " ms";
