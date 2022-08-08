@@ -340,7 +340,8 @@ namespace AssessmentOne
                     lb.SetSelected(x, true);
                 }
                 if (y == 0)
-                    MessageBox.Show("Search target may be smaller than the minimum value", "Binary Search", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Search target may be smaller than the minimum value (" + lb.Items[0].ToString() + ")", "Binary Search", 
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (y > z - 4)
             {
@@ -349,7 +350,8 @@ namespace AssessmentOne
                     lb.SetSelected(x, true);
                 }
                 if (y == z)
-                    MessageBox.Show("Search target may be larger than the maximum value", "Binary Search", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Search target may be larger than the maximum value (" + lb.Items[z - 1].ToString() + ")", "Binary Search", 
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
