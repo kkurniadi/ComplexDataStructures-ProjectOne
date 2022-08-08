@@ -184,7 +184,6 @@ namespace AssessmentOne
             {
                 if (!IsSorted(sensorAData))
                 {
-                    // TODO: Get data to sort and display
                     InsertionSort(sensorAData);
                     ShowAllSensorData();
                 }
@@ -205,6 +204,7 @@ namespace AssessmentOne
                 if (!IsSorted(sensorAData))
                 {
                     SelectionSort(sensorAData);
+                    ShowAllSensorData();
                 }
                 Stopwatch stopwatch = Stopwatch.StartNew();
                 int target = BinarySearchRecursive(sensorAData, int.Parse(textBoxSearchTargetA.Text), 0, NumberOfNodes(sensorAData));
@@ -222,13 +222,15 @@ namespace AssessmentOne
             {
                 if (!IsSorted(sensorBData))
                 {
-                    Stopwatch stopwatch = Stopwatch.StartNew();
-                    int target = BinarySearchIterative(sensorBData, int.Parse(textBoxSearchTargetB.Text), 0, NumberOfNodes(sensorBData));
-                    stopwatch.Stop();
-                    textBoxBinSearchIterB.Text = stopwatch.ElapsedTicks.ToString() + " ticks";
-                    DisplayListboxData(sensorBData, listBoxSensorB);
-                    HighlightData(listBoxSensorB, target);
+                    InsertionSort(sensorBData);
+                    ShowAllSensorData();
                 }
+                Stopwatch stopwatch = Stopwatch.StartNew();
+                int target = BinarySearchIterative(sensorBData, int.Parse(textBoxSearchTargetB.Text), 0, NumberOfNodes(sensorBData));
+                stopwatch.Stop();
+                textBoxBinSearchIterB.Text = stopwatch.ElapsedTicks.ToString() + " ticks";
+                DisplayListboxData(sensorBData, listBoxSensorB);
+                HighlightData(listBoxSensorB, target);
             }
             else
                 MessageBox.Show("Please enter a value to search for", "Binary Search", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -239,13 +241,15 @@ namespace AssessmentOne
             {
                 if (!IsSorted(sensorBData))
                 {
-                    Stopwatch stopwatch = Stopwatch.StartNew();
-                    int target = BinarySearchRecursive(sensorBData, int.Parse(textBoxSearchTargetB.Text), 0, NumberOfNodes(sensorBData));
-                    stopwatch.Stop();
-                    textBoxBinSearchRecB.Text = stopwatch.ElapsedTicks.ToString() + " ticks";
-                    DisplayListboxData(sensorBData, listBoxSensorB);
-                    HighlightData(listBoxSensorB, target);
+                    SelectionSort(sensorBData);
+                    ShowAllSensorData();
                 }
+                Stopwatch stopwatch = Stopwatch.StartNew();
+                int target = BinarySearchRecursive(sensorBData, int.Parse(textBoxSearchTargetB.Text), 0, NumberOfNodes(sensorBData));
+                stopwatch.Stop();
+                textBoxBinSearchRecB.Text = stopwatch.ElapsedTicks.ToString() + " ticks";
+                DisplayListboxData(sensorBData, listBoxSensorB);
+                HighlightData(listBoxSensorB, target);
             }
             else
                 MessageBox.Show("Please enter a value to search for", "Binary Search", MessageBoxButtons.OK, MessageBoxIcon.Warning);
