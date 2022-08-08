@@ -85,11 +85,10 @@ namespace AssessmentOne
         // The method code must follow the pseudo code supplied below in the Appendix. The return type is Boolean.
         public bool SelectionSort(LinkedList<double> list)
         {
-            int min = 0;
             int max = NumberOfNodes(list);
             for (int i = 0; i < max; i++)
             {
-                min = i;
+                int min = i;
                 for (int j = i + 1; j < max; j++)
                 {
                     if (list.ElementAt(j) < list.ElementAt(min))
