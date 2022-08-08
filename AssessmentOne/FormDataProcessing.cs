@@ -329,30 +329,24 @@ namespace AssessmentOne
             if (y > 1 && y < z - 3)
             {
                 for (int x = y - 2; x < y + 3; x++)
-                {
                     lb.SetSelected(x, true);
-                }
             }
-            else if (y < 2)
+            else if (y == 1)
             {
                 for (int x = 0; x < 5; x++)
-                {
                     lb.SetSelected(x, true);
-                }
-                if (y == 0)
-                    MessageBox.Show("Search target may be smaller than the minimum value (" + lb.Items[0].ToString() + ")", "Binary Search", 
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (y > z - 4)
+            else if (y > z - 4 && y < z)
             {
                 for (int x = z - 5; x < z; x++)
-                {
                     lb.SetSelected(x, true);
-                }
-                if (y == z)
-                    MessageBox.Show("Search target may be larger than the maximum value (" + lb.Items[z - 1].ToString() + ")", "Binary Search", 
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else if (y == 0)
+                MessageBox.Show("Search target is smaller than the minimum value (" + lb.Items[0].ToString() + ")", "Binary Search",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show("Search target is larger than the maximum value (" + lb.Items[z - 1].ToString() + ")", "Binary Search",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
