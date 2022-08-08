@@ -30,6 +30,8 @@ namespace AssessmentOne
         // Declare an instance of the Galileo library in the method and create the appropriate loop construct to populate the two LinkedList;
         // the data from Sensor A will populate the first LinkedList, while the data from Sensor B will populate the second LinkedList.
         // The LinkedList size will be hardcoded inside the method and must be equal to 400. The input parameters are empty, and the return type is void.
+        // 4.13	Add two NumericUpDown controls for Sigma and Mu. The value for Sigma must be limited with a minimum of 10 and a maximum of 20.
+        // Set the default value to 10. The value for Mu must be limited with a minimum of 35 and a maximum of 75. Set the default value to 50.
         public void LoadData()
         {
             ReadData rd = new ReadData();
