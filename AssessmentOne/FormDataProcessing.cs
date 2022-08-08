@@ -185,7 +185,7 @@ namespace AssessmentOne
                 if (!IsSorted(sensorAData))
                 {
                     // TODO: Get data to sort and display
-                    sensorAData.OrderBy(data => data);
+                    InsertionSort(sensorAData);
                     ShowAllSensorData();
                 }
                 Stopwatch stopwatch = Stopwatch.StartNew();
@@ -202,15 +202,16 @@ namespace AssessmentOne
         {
             if (!string.IsNullOrWhiteSpace(textBoxSearchTargetA.Text))
             {
-                if (IsSorted(sensorAData))
+                if (!IsSorted(sensorAData))
                 {
-                    Stopwatch stopwatch = Stopwatch.StartNew();
-                    int target = BinarySearchRecursive(sensorAData, int.Parse(textBoxSearchTargetA.Text), 0, NumberOfNodes(sensorAData));
-                    stopwatch.Stop();
-                    textBoxBinSearchRecA.Text = stopwatch.ElapsedTicks.ToString() + " ticks";
-                    DisplayListboxData(sensorAData, listBoxSensorA);
-                    HighlightData(listBoxSensorA, target);
+                    SelectionSort(sensorAData);
                 }
+                Stopwatch stopwatch = Stopwatch.StartNew();
+                int target = BinarySearchRecursive(sensorAData, int.Parse(textBoxSearchTargetA.Text), 0, NumberOfNodes(sensorAData));
+                stopwatch.Stop();
+                textBoxBinSearchRecA.Text = stopwatch.ElapsedTicks.ToString() + " ticks";
+                DisplayListboxData(sensorAData, listBoxSensorA);
+                HighlightData(listBoxSensorA, target);
             }
             else
                 MessageBox.Show("Please enter a value to search for", "Binary Search", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -219,7 +220,7 @@ namespace AssessmentOne
         {
             if (!string.IsNullOrWhiteSpace(textBoxSearchTargetB.Text))
             {
-                if (IsSorted(sensorBData))
+                if (!IsSorted(sensorBData))
                 {
                     Stopwatch stopwatch = Stopwatch.StartNew();
                     int target = BinarySearchIterative(sensorBData, int.Parse(textBoxSearchTargetB.Text), 0, NumberOfNodes(sensorBData));
@@ -236,7 +237,7 @@ namespace AssessmentOne
         {
             if (!string.IsNullOrWhiteSpace(textBoxSearchTargetB.Text))
             {
-                if (IsSorted(sensorBData))
+                if (!IsSorted(sensorBData))
                 {
                     Stopwatch stopwatch = Stopwatch.StartNew();
                     int target = BinarySearchRecursive(sensorBData, int.Parse(textBoxSearchTargetB.Text), 0, NumberOfNodes(sensorBData));
