@@ -171,9 +171,9 @@ namespace AssessmentOne
         // Finally, the code will call the “DisplayListboxData” method and highlight the appropriate number (or the next closest number). 
         public bool IsSorted(LinkedList<double> list)
         {
-            for (int i = 1; i < NumberOfNodes(list); i++)
+            for (int i = 0; i < NumberOfNodes(list) - 1; i++)
             {
-                if (list.ElementAt(i - 1) > list.ElementAt(i))
+                if (list.ElementAt(i) > list.ElementAt(i + 1))
                     return false;
             }
             return true;
