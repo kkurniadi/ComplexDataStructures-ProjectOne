@@ -298,7 +298,7 @@ namespace AssessmentOne
             if (SelectionSort(sensorAData))
             {
                 stopwatch.Stop();
-                textBoxSelectionSortA.Text = stopwatch.ElapsedMilliseconds.ToString() + " ms";
+                textBoxSelectionSortA.Text = stopwatch.ElapsedMilliseconds.ToString() + " milliseconds";
                 ShowAllSensorData();
                 DisplayListboxData(sensorAData, listBoxSensorA);
             }
@@ -309,7 +309,7 @@ namespace AssessmentOne
             if (InsertionSort(sensorAData))
             {
                 stopwatch.Stop();
-                textBoxInsertionSortA.Text = stopwatch.ElapsedMilliseconds.ToString() + " ms";
+                textBoxInsertionSortA.Text = stopwatch.ElapsedMilliseconds.ToString() + " milliseconds";
                 ShowAllSensorData();
                 DisplayListboxData(sensorAData, listBoxSensorA);
             }
@@ -320,7 +320,7 @@ namespace AssessmentOne
             if (SelectionSort(sensorBData))
             {
                 stopwatch.Stop();
-                textBoxSelectionSortB.Text = stopwatch.ElapsedMilliseconds.ToString() + " ms";
+                textBoxSelectionSortB.Text = stopwatch.ElapsedMilliseconds.ToString() + " milliseconds";
                 ShowAllSensorData();
                 DisplayListboxData(sensorBData, listBoxSensorB);
             }
@@ -331,7 +331,7 @@ namespace AssessmentOne
             if (InsertionSort(sensorBData))
             {
                 stopwatch.Stop();
-                textBoxInsertionSortB.Text = stopwatch.ElapsedMilliseconds.ToString() + " ms";
+                textBoxInsertionSortB.Text = stopwatch.ElapsedMilliseconds.ToString() + " milliseconds";
                 ShowAllSensorData();
                 DisplayListboxData(sensorBData, listBoxSensorB);
             }
