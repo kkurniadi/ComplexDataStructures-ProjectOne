@@ -168,7 +168,8 @@ namespace AssessmentOne
         // 4.	Method for Sensor B and Binary Search Recursive
         // The search code must check to ensure the data is sorted, then start a stopwatch before calling the search method.
         // Once the search is complete the stopwatch will stop and the number of ticks will be displayed in a read only textbox.
-        // Finally, the code will call the “DisplayListboxData” method and highlight the appropriate number (or the next closest number). 
+        // Finally, the code will call the “DisplayListboxData” method and highlight the appropriate number (or the next closest number).
+        #region BinSearchButtons
         public bool IsSorted(LinkedList<double> list)
         {
             for (int i = 0; i < NumberOfNodes(list) - 1; i++)
@@ -255,6 +256,33 @@ namespace AssessmentOne
             else
                 MessageBox.Show("Please enter a value to search for", "Binary Search", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
+        private void HighlightData(ListBox lb, int foundIndex)
+        {
+            int y = foundIndex;
+            int z = lb.Items.Count;
+            if (y > 1 && y < z - 3)
+            {
+                for (int x = y - 2; x < y + 3; x++)
+                    lb.SetSelected(x, true);
+            }
+            else if (y == 1)
+            {
+                for (int x = 0; x < 5; x++)
+                    lb.SetSelected(x, true);
+            }
+            else if (y > z - 4 && y < z)
+            {
+                for (int x = z - 5; x < z; x++)
+                    lb.SetSelected(x, true);
+            }
+            else if (y == 0)
+                MessageBox.Show("Search target is smaller than the minimum value (" + lb.Items[0].ToString() + ")", "Binary Search",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show("Search target is larger than the maximum value (" + lb.Items[z - 1].ToString() + ")", "Binary Search",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        #endregion
         // 4.12	Create four button click methods that will sort the LinkedList using the Selection and Insertion methods. The four methods are:
         // 1.	Method for Sensor A and Selection Sort
         // 2.	Method for Sensor A and Insertion Sort
@@ -263,6 +291,7 @@ namespace AssessmentOne
         // The button method must start a stopwatch before calling the sort method.
         // Once the sort is complete the stopwatch will stop and the number of milliseconds will be displayed in a read only textbox.
         // Finally, the code will call the “ShowAllSensorData” method and “DisplayListboxData” for the appropriate sensor.
+        #region SortButtons
         private void buttonSelectionSortA_Click(object sender, EventArgs e)
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
@@ -307,7 +336,9 @@ namespace AssessmentOne
                 DisplayListboxData(sensorBData, listBoxSensorB);
             }
         }
+        #endregion
         // 4.14	Add two textboxes for the search value; one for each sensor, ensure only numeric values can be entered.
+        #region TextBoxInput
         private void textBoxSearchTargetA_KeyPress(object sender, KeyPressEventArgs e)
         {
             HandleNonNumericalInput(e);
@@ -323,31 +354,6 @@ namespace AssessmentOne
                 kp.Handled = true;
             }
         }
-        private void HighlightData(ListBox lb, int foundIndex)
-        {
-            int y = foundIndex;
-            int z = lb.Items.Count;
-            if (y > 1 && y < z - 3)
-            {
-                for (int x = y - 2; x < y + 3; x++)
-                    lb.SetSelected(x, true);
-            }
-            else if (y == 1)
-            {
-                for (int x = 0; x < 5; x++)
-                    lb.SetSelected(x, true);
-            }
-            else if (y > z - 4 && y < z)
-            {
-                for (int x = z - 5; x < z; x++)
-                    lb.SetSelected(x, true);
-            }
-            else if (y == 0)
-                MessageBox.Show("Search target is smaller than the minimum value (" + lb.Items[0].ToString() + ")", "Binary Search",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else
-                MessageBox.Show("Search target is larger than the maximum value (" + lb.Items[z - 1].ToString() + ")", "Binary Search",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+        #endregion
     }
 }
