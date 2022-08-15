@@ -265,22 +265,22 @@ namespace AssessmentOne
                 for (int x = y - 2; x < y + 3; x++)
                     lb.SetSelected(x, true);
             }
-            else if (y == 1)
+            else if (y <= 1)
             {
                 for (int x = 0; x < 5; x++)
                     lb.SetSelected(x, true);
+                if (y == 0)
+                    MessageBox.Show("Search target is smaller than the minimum value (" + lb.Items[0].ToString() + ")", "Binary Search",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (y > z - 4 && y < z)
+            else if (y > z - 4)
             {
                 for (int x = z - 5; x < z; x++)
                     lb.SetSelected(x, true);
-            }
-            else if (y == 0)
-                MessageBox.Show("Search target is smaller than the minimum value (" + lb.Items[0].ToString() + ")", "Binary Search",
+                if (y == z)
+                    MessageBox.Show("Search target is larger than the maximum value (" + lb.Items[z - 1].ToString() + ")", "Binary Search",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else
-                MessageBox.Show("Search target is larger than the maximum value (" + lb.Items[z - 1].ToString() + ")", "Binary Search",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }   
         }
         #endregion
         // 4.12	Create four button click methods that will sort the LinkedList using the Selection and Insertion methods. The four methods are:
