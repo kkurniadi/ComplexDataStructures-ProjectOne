@@ -9,7 +9,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Galileo;
-
+// Kirsten Kurniadi, ID: 30045816
+// Date: 15/08/2022
+// Assessment Project One (Individual Project)
+// Using LinkedList<T>, 3rd Party DLL and Windows Forms
 namespace AssessmentOne
 {
     public partial class FormDataProcessing : Form
